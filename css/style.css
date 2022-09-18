@@ -1,0 +1,123 @@
+@import url("null.css");
+header {
+   background-color: rgb(144, 182, 73);
+   position: relative;   
+}
+h1 {
+   text-align: center;
+   font-size: 40px;
+   font-weight: 700;
+   color: rgb(77, 37, 11);
+}
+.menu {
+   position: absolute;
+   top: 20%;
+   left: 2%;
+   display: inline-block;
+   width: 45%;
+   min-height: 70%;
+   background-color: rgb(143, 99, 107);
+}
+.menu__title {
+   text-transform: uppercase;
+   font-weight: 700;
+   padding: 10px 0 0 20px;
+   color: ivory;
+   position: relative;
+   text-align: center;
+}
+#menu__toggle {
+   opacity: 0;
+}
+.menu__btn {
+   position: fixed;
+   top: 35%;
+   left: 23%;
+   width: 30px;
+   height: 20px;
+   cursor: pointer;
+   z-index: 1;
+ }
+.menu__btn span,
+.menu__btn span::after,
+.menu__btn span::before{
+   display: inline-block;
+   width: 30px;
+   height: 2px;
+   background-color: #000;
+   position: absolute;
+}
+.menu__btn span::after,
+.menu__btn span::before {
+   content: "";
+}
+.menu__btn span {
+   margin-bottom: 8px;
+}
+.menu__btn span::after{
+   top: 8px;
+}
+.menu__btn span::before {
+   top: -8px;
+}
+.menu__list {
+   margin: 0 auto;
+   padding: 0 ;
+   visibility: hidden;
+}
+.menu__item {   
+   text-align: center;
+   margin: 40px auto;
+}
+.list__item {
+   font-size: 36px;
+   font-weight: 700;
+   color: rgb(52, 5, 58);
+}
+.list__item:hover {
+   text-shadow: 0px 5px 10px wheat;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+   transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+   top: 0;
+   transform: rotate(0);
+ }
+#menu__toggle:checked ~ .menu__btn > span::after {
+   top: 0;
+   transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__list {
+   visibility: visible;
+ }
+.challengers {
+   display: inline-block;
+   width: 50%;
+   height: 70%;
+   overflow: hidden;
+   position: absolute;
+   top: 20%;
+   right: 2%;
+}
+.challenger {   
+   height: 100%;
+   background-color: rgb(99, 166, 168);
+   padding: 20px 10px;
+}
+.challenger p{
+   display: inline-block;
+   width: 45%;
+   font-size: 30px;
+}
+.challenger__name {
+   text-align: center;
+   font-size: 35px;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: rgb(44, 9, 77);
+   margin: 10px 0;
+}
+.challenger__image {
+   width: 50%;
+}
